@@ -24,8 +24,6 @@ class Book
         author = bookAuthor;
         title = bookTitle;
     }
-
-    // Add the methods here ...
     
     // Exercise 2.83
     /**
@@ -44,5 +42,21 @@ class Book
         return title;
     }
     
+    // Exercise 2.84
+    /**
+     * The method printAuthor allows us to print out what's store in author
+     */
+    public void printAuthor()
+    {
+        System.out.println(author);
+    }
+    
+    /**
+     * The method printTitle allows us to print out what's store in title
+     */
+    public void printTitle()
+    {
+        System.out.println(title);
+    }
     
 }
