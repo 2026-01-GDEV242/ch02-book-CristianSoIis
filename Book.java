@@ -12,17 +12,18 @@ class Book
      */
     private String author;
     private String title;
-  
+    private int pages;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    
-    public Book(String bookAuthor, String bookTitle)
+    // Exercise 2.85, Added pages and the methods for it
+    public Book(String bookAuthor, String bookTitle, int numPages)
     {
         author = bookAuthor;
         title = bookTitle;
+        pages = numPages;
     }
     
     // Exercise 2.83
@@ -59,4 +60,21 @@ class Book
         System.out.println(title);
     }
     
+     // Exercise 2.85
+     /**
+      * Getter method getPages returns what's store in pages
+      */
+    public int getPages()
+    {
+        return pages;
+    }
+    
+    /**
+     * The method printPages prints what's stored in pages
+     */
+    public void printPages()
+    {
+        System.out.println(pages);
+    }
+
 }
