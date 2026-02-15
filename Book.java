@@ -20,6 +20,7 @@ class Book
      * is constructed.
      */
     // Exercise 2.85, Added pages and the methods for it
+    // Exercise 2.88 Added ref Number in the constructer but not as a paramter and methods for it
     public Book(String bookAuthor, String bookTitle, int numPages)
     {
         author = bookAuthor;
@@ -80,18 +81,36 @@ class Book
     }
     
     // Exercise 2.87
+    // Exercise 2.89 Added the refNumber to printDetails method
+    /**
+     * 
+     */
     public void printDetails()
     {
-        System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages);
+        if(getRefNumber().length() == 0)
+        {
+            System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", refNumber: ZZZ");
+        }
+        else
+        {
+            System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", refNumber: " + refNumber);
+        }
+        
     }
     
   
     // Exercise 2.88
+    /**
+     * 
+     */
     public void setRefNumber(String refNum)
     {
         refNumber = refNum;
     }
     
+    /**
+     * 
+     */
     public String getRefNumber()
     {
         return refNumber;
