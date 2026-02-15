@@ -76,5 +76,13 @@ class Book
     {
         System.out.println(pages);
     }
+    
+    // Exercise 2.87
+    public void printDetails()
+    {
+        System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages);
+    }
+    
+
 
 }
