@@ -14,19 +14,22 @@ class Book
     private String title;
     private int pages;
     private String refNumber;
+    private int borrow;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
     // Exercise 2.85, Added pages and the methods for it
-    // Exercise 2.88 Added ref Number in the constructer but not as a paramter and methods for it
+    // Exercise 2.88, Added ref Number in the constructer but not as a paramter and methods for it
+    // Exercise 2.91, 
     public Book(String bookAuthor, String bookTitle, int numPages)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = numPages;
         refNumber = "";
+        borrow = 0;
     }
     
     // Exercise 2.83
@@ -82,6 +85,7 @@ class Book
     
     // Exercise 2.87
     // Exercise 2.89 Added the refNumber to printDetails method
+    // Exercise 2.91
     /**
      * 
      */
@@ -89,23 +93,31 @@ class Book
     {
         if(getRefNumber().length() == 0)
         {
-            System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", refNumber: ZZZ");
+            System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", refNumber: ZZZ, Borrow: " + borrow);
         }
         else
         {
-            System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", refNumber: " + refNumber);
+            System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", refNumber: " + refNumber + ", Borrow: " + borrow);
         }
         
     }
     
   
     // Exercise 2.88
+    // Exercise 2.90
     /**
      * 
      */
     public void setRefNumber(String refNum)
     {
-        refNumber = refNum;
+        if(refNum.length() < 3)
+        {
+            System.out.println("Error, please make the refNumber at least 3 charaters long");
+        }
+        else
+        {
+            refNumber = refNum;
+        }
     }
     
     /**
@@ -116,5 +128,18 @@ class Book
         return refNumber;
     }
 
+    /**
+     * 
+     */
+    // Exercise 2.91
+    public int getBorrow()
+    {
+        return borrow;
+    }
+    
+    public void borrowed()
+    {
+        borrow++;
+    }
 
 }
