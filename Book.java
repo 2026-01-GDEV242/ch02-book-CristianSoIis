@@ -15,6 +15,7 @@ class Book
     private int pages;
     private String refNumber;
     private int borrow;
+    private boolean courseText;
 
     /**
      * Set the author and title fields when this object
@@ -23,13 +24,15 @@ class Book
     // Exercise 2.85, Added pages and the methods for it
     // Exercise 2.88, Added ref Number in the constructer but not as a paramter and methods for it
     // Exercise 2.91, 
-    public Book(String bookAuthor, String bookTitle, int numPages)
+    // Exercise 2.92
+    public Book(String bookAuthor, String bookTitle, int numPages, boolean text)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = numPages;
         refNumber = "";
         borrow = 0;
+        courseText = text;
     }
     
     // Exercise 2.83
@@ -137,9 +140,20 @@ class Book
         return borrow;
     }
     
+    /**
+     * 
+     */
     public void borrowed()
     {
         borrow++;
     }
 
+    /**
+     * 
+     */
+    // Exercise 2.92
+    public boolean isCourseText()
+    {
+        return courseText;
+    }
 }
